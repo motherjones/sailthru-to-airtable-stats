@@ -7,7 +7,7 @@ $traceback = $_SERVER['HTTP_REFERER'];
     $err_msg["message"] = "Not allowed";
     echo json_encode($err_msg);
     die();
-}*/
+}
 
 //example call below
 //curl 'https://api.sailthru.com/<endpoint>?api_key=<key>&sig=<sig>&format=<json_or_xml>&json=<url_escaped_data>'
@@ -24,4 +24,7 @@ $sig = md5($secret . $api_key . $type . $payload);
 $return_me["return"] = $sig;
 
 echo json_encode($return_me);
+*/
+
+echo "Cors should be working at this point";
  ?>
